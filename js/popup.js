@@ -10,25 +10,9 @@ boxItems.forEach(
 		el.addEventListener('mouseleave', isOutViewport);
 		el.addEventListener('mouseenter', onBox);
 		el.addEventListener('mouseleave', outBox);
+		target.addEventListener('mouseover', removeIt);
 
-		function onBox() {
-			if (! itsCode) {
-				heading.classList.remove('visually-hidden');
-			}
-			else {
-				return;
-			}
-		}
-
-		function outBox() {
-			if (! itsCode) {
-				heading.classList.add('visually-hidden');
-			}
-			else {
-				return;
-			}
-		}
-
+		// Show info popup on hover
 		function isInViewport() {
 			let boxSide = el.offsetWidth;
 			let viewportWidth = window.innerWidth;
@@ -61,6 +45,7 @@ boxItems.forEach(
 			}	
 		}
 		
+		// Hide info popup on mouse out
 		function isOutViewport() {
 			if (target !== null) {
 				target.classList.remove('out-of-viewport');
@@ -73,16 +58,38 @@ boxItems.forEach(
 				return;
 			} 
 		}
-		if (target !== null) {
-			let removeIt = function remove() {	
-				target.classList.add('visually-hidden');	
-				target.style.left = null;
-				target.style.right = null;
-			};
-			target.addEventListener('mouseover', removeIt);
+		
+		// Hide info on self-hover
+		function removeIt() {
+			if (target !== null) {
+					target.classList.add('visually-hidden');	
+					target.style.left = null;
+					target.style.right = null;
+			}
+			else {
+				return;
+			}
 		}
-		else {
-			return;
-		}	
+		
+		// Show heading
+		function onBox() {
+			if (! itsCode) {
+				heading.classList.remove('visually-hidden');
+			}
+			else {
+				return;
+			}
+		}
+
+		// Hide heading
+		function outBox() {
+			if (! itsCode) {
+				heading.classList.add('visually-hidden');
+			}
+			else {
+				return;
+			}
+		}
+
 	}
 );
