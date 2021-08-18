@@ -10,7 +10,6 @@ boxItems.forEach(
 		el.addEventListener('mouseleave', isOutViewport);
 		el.addEventListener('mouseenter', onBox);
 		el.addEventListener('mouseleave', outBox);
-		target.addEventListener('mouseover', removeIt);
 
 		// Show info popup on hover
 		function isInViewport() {
@@ -60,15 +59,16 @@ boxItems.forEach(
 		}
 		
 		// Hide info on self-hover
-		function removeIt() {
-			if (target !== null) {
-					target.classList.add('visually-hidden');	
-					target.style.left = null;
-					target.style.right = null;
-			}
-			else {
-				return;
-			}
+		if (target !== null) {
+			let removeIt = function remove() {	
+				target.classList.add('visually-hidden');	
+				target.style.left = null;
+				target.style.right = null;
+			};
+			target.addEventListener('mouseover', removeIt);
+		}
+		else {
+			return;
 		}
 		
 		// Show heading
