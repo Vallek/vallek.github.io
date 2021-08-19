@@ -6,46 +6,51 @@ boxItems.forEach(
 		let target = el.querySelector('.info');
 		let heading = el.querySelector('.box-item__heading');
 		let itsCode = el.classList.contains("always-show");
-		el.addEventListener('mouseenter', isInViewport);
-		el.addEventListener('mouseleave', isOutViewport);
+		el.addEventListener('mouseenter', showPopup);
+		el.addEventListener('mouseleave', hidePopup);
 		el.addEventListener('mouseenter', onBox);
 		el.addEventListener('mouseleave', outBox);
 
-		// Show info popup on hover
-		function isInViewport() {
+		function getSizes() {
 			let boxSide = el.offsetWidth;
 			let viewportWidth = window.innerWidth;
 			let rightSide = viewportWidth - el.getBoundingClientRect().right;
 			let leftSide = el.getBoundingClientRect().left;
 			if (
 				target !== null &&
-				rightSide >= boxSide &&
-				viewportWidth >= 800
+				viewportWidth >= 800 &&
+				rightSide >= boxSide ||
+				leftSide >= boxSide
+			) {
+				console.log('aaa');
+				return boxSide;
+			}
+		}
+
+		window.addEventListener('resize', getSizes);
+
+		function passSizes(param) {
+			return param;
+		}
+
+		let a = [];
+		a.push(passSizes(getSizes()));
+
+		function showPopup() {
+			if (
+				target !== null &&
+				a != undefined
 			) {
 				target.classList.remove('visually-hidden');
 				target.classList.add('inside-viewport');
-				target.style.left = boxSide + 'px';
+				target.style.left = a + 'px';
 			}
 			else {
-				if (
-					target !== null &&
-					leftSide >= boxSide &&
-					viewportWidth >= 800
-					) {
-					target.classList.remove('visually-hidden');
-					target.classList.add('out-of-viewport');
-					target.style.right = boxSide + 'px';
-				}
-				else if (target !== null) {
-					target.style.left = null;
-					target.style.right = null;
-					return;
-				} 
-			}	
+				return;
+			}
 		}
 		
-		// Hide info popup on mouse out
-		function isOutViewport() {
+		function hidePopup() {
 			if (target !== null) {
 				target.classList.remove('out-of-viewport');
 				target.classList.remove('inside-viewport');
@@ -57,8 +62,7 @@ boxItems.forEach(
 				return;
 			} 
 		}
-		
-		// Hide info on self-hover
+
 		if (target !== null) {
 			let removeIt = function remove() {	
 				target.classList.add('visually-hidden');	
@@ -69,9 +73,8 @@ boxItems.forEach(
 		}
 		else {
 			return;
-		}
-		
-		// Show heading
+		}	
+
 		function onBox() {
 			if (! itsCode) {
 				heading.classList.remove('visually-hidden');
@@ -81,7 +84,6 @@ boxItems.forEach(
 			}
 		}
 
-		// Hide heading
 		function outBox() {
 			if (! itsCode) {
 				heading.classList.add('visually-hidden');
