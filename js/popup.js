@@ -26,15 +26,14 @@ boxItems.forEach(
 				return boxSide;
 			}
 		}
-
+		
 		window.addEventListener('resize', getSizes);
 
 		function passSizes(param) {
 			return param;
 		}
 
-		let a = [];
-		a.push(passSizes(getSizes()));
+		let a = passSizes(getSizes());
 
 		function showPopup() {
 			if (
