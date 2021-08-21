@@ -1,4 +1,5 @@
 let boxItems = document.querySelectorAll('.box-item');
+let a = []; 
 
 boxItems.forEach(
 	function changeOnHover(el) {
@@ -22,7 +23,6 @@ boxItems.forEach(
 				rightSide >= boxSide ||
 				leftSide >= boxSide
 			) {
-				console.log('aaa');
 				return boxSide;
 			}
 		}
@@ -32,8 +32,10 @@ boxItems.forEach(
 		function passSizes(param) {
 			return param;
 		}
-
-		let a = passSizes(getSizes());
+		passSizes(getSizes());
+		let x = passSizes(getSizes());
+		a.push(x);
+		console.log(a);
 
 		function showPopup() {
 			if (
@@ -42,7 +44,9 @@ boxItems.forEach(
 			) {
 				target.classList.remove('visually-hidden');
 				target.classList.add('inside-viewport');
-				target.style.left = a + 'px';
+				let y = a[a.map(x => x * 2)];
+				target.style.left = y + 'px';
+				console.log(y);
 			}
 			else {
 				return;
