@@ -4,18 +4,23 @@ boxItems.forEach(
 	function changeOnHover(el) {
 		
 		let target = el.querySelector('.info');
+
 		let heading = el.querySelector('.box-item__heading');
 		let itsCode = el.classList.contains("always-show");
-		let boxLink = el.querySelector('.box-item__image-link');
 		el.addEventListener('mouseenter', isInViewport);
 		el.addEventListener('mouseleave', isOutViewport);
+
 		el.addEventListener('mouseenter', onBox);
 		el.addEventListener('mouseleave', outBox);
+		
+		let boxLink = el.querySelector('.box-item__image-link');
 		boxLink.addEventListener('focus', onBox);
 		boxLink.addEventListener('focusout', outBox);
-		let boxHeading = boxLink.querySelector('.caption-link');
-		if (boxHeading != null) {
-			boxHeading.addEventListener('focus', onBox);
+		
+		let boxHeadingLink = el.querySelector('.caption-link');
+		if (! itsCode &&
+			boxHeadingLink != null) {
+			boxHeadingLink.addEventListener('focus', onBox);
 		}
 		else {
 			return;
@@ -24,6 +29,7 @@ boxItems.forEach(
 		function onBox() {
 			if (! itsCode) {
 				heading.classList.remove('visually-hidden');
+				console.log('a');
 			}
 			else {
 				return;
