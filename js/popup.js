@@ -3,7 +3,7 @@ let boxItems = document.querySelectorAll('.box-item');
 boxItems.forEach(
 	function changeOnHover(el) {
 		
-		let target = el.querySelector('.info');
+		let infoPopup = el.querySelector('.info');
 
 		let heading = el.querySelector('.box-item__heading');
 		let itsCode = el.classList.contains("always-show");
@@ -29,7 +29,6 @@ boxItems.forEach(
 		function onBox() {
 			if (! itsCode) {
 				heading.classList.remove('visually-hidden');
-				console.log('a');
 			}
 			else {
 				return;
@@ -51,51 +50,51 @@ boxItems.forEach(
 			let rightSide = viewportWidth - el.getBoundingClientRect().right;
 			let leftSide = el.getBoundingClientRect().left;
 			if (
-				target !== null &&
+				infoPopup !== null &&
 				rightSide >= boxSide &&
 				viewportWidth >= 800
 			) {
-				target.classList.remove('visually-hidden');
-				target.classList.add('inside-viewport');
-				target.style.left = boxSide + 'px';
+				infoPopup.classList.remove('visually-hidden');
+				infoPopup.classList.add('inside-viewport');
+				infoPopup.style.left = boxSide + 'px';
 			}
 			else {
 				if (
-					target !== null &&
+					infoPopup !== null &&
 					leftSide >= boxSide &&
 					viewportWidth >= 800
 					) {
-					target.classList.remove('visually-hidden');
-					target.classList.add('out-of-viewport');
-					target.style.right = boxSide + 'px';
+					infoPopup.classList.remove('visually-hidden');
+					infoPopup.classList.add('out-of-viewport');
+					infoPopup.style.right = boxSide + 'px';
 				}
-				else if (target !== null) {
-					target.style.left = null;
-					target.style.right = null;
+				else if (infoPopup !== null) {
+					infoPopup.style.left = null;
+					infoPopup.style.right = null;
 					return;
 				} 
 			}	
 		}
 		
 		function isOutViewport() {
-			if (target !== null) {
-				target.classList.remove('out-of-viewport');
-				target.classList.remove('inside-viewport');
-				target.style.left = null;
-				target.style.right = null;
-				target.classList.add('visually-hidden');
+			if (infoPopup !== null) {
+				infoPopup.classList.remove('out-of-viewport');
+				infoPopup.classList.remove('inside-viewport');
+				infoPopup.style.left = null;
+				infoPopup.style.right = null;
+				infoPopup.classList.add('visually-hidden');
 			}
 			else {
 				return;
 			} 
 		}
-		if (target !== null) {
+		if (infoPopup !== null) {
 			let removeIt = function remove() {	
-				target.classList.add('visually-hidden');	
-				target.style.left = null;
-				target.style.right = null;
+				infoPopup.classList.add('visually-hidden');	
+				infoPopup.style.left = null;
+				infoPopup.style.right = null;
 			};
-			target.addEventListener('mouseover', removeIt);
+			infoPopup.addEventListener('mouseover', removeIt);
 		}
 		else {
 			return;
