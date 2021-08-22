@@ -13,6 +13,19 @@ boxItems.forEach(
 		el.addEventListener('mouseenter', onBox);
 		el.addEventListener('mouseleave', outBox);
 		
+		if (infoPopup !== null) {
+			let removeIt = function remove() {	
+				infoPopup.classList.add('visually-hidden');	
+				infoPopup.style.left = null;
+				infoPopup.style.right = null;
+				console.log('remove');
+			};
+			infoPopup.addEventListener('mouseover', removeIt);
+		}
+		else {
+			return;
+		}	
+
 		let boxLink = el.querySelector('.box-item__image-link');
 		boxLink.addEventListener('focus', onBox);
 		boxLink.addEventListener('focusout', outBox);
@@ -88,16 +101,5 @@ boxItems.forEach(
 				return;
 			} 
 		}
-		if (infoPopup !== null) {
-			let removeIt = function remove() {	
-				infoPopup.classList.add('visually-hidden');	
-				infoPopup.style.left = null;
-				infoPopup.style.right = null;
-			};
-			infoPopup.addEventListener('mouseover', removeIt);
-		}
-		else {
-			return;
-		}	
 	}
 );
