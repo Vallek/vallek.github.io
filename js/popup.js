@@ -11,7 +11,7 @@ boxItems.forEach(
 		let heading = el.querySelector('.box-item__heading');
 		let itsCode = el.classList.contains("always-show");
 
-		// Show/hide popups on hover 
+		// Show/hide popups on hover and focus
 		el.addEventListener('mouseenter', showPopup);
 		el.addEventListener('mouseleave', hidePopup);
 		el.addEventListener('focusin', showPopup);
