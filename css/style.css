@@ -799,7 +799,7 @@ a:focus {
 	position: absolute;
 	visibility: visible;
 	z-index: 1;
-	transition: right 0.2s ease-in,
+	transition: transform 0.2s ease-in,
 	z-index 0.1s ease-in 0.2s;
 	box-shadow: -5px 3px 10px -3px rgb(56, 56, 56);
 }
@@ -808,6 +808,6 @@ a:focus {
 	position: absolute;
 	visibility: visible;
 	z-index: 1;
-	transition: left 0.2s ease-in,
+	transition: transform 0.2s ease-in,
 	z-index 0.1s ease-in 0.2s;
 }

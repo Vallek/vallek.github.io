@@ -81,7 +81,7 @@ boxItems.forEach(
 			) {
 				infoPopup.classList.remove('visually-hidden');
 				infoPopup.classList.add('inside-viewport');
-				infoPopup.style.left = boxSide + 'px';
+				infoPopup.style.transform = 'translate(' + boxSide + 'px)';
 			}
 			else {
 				if (
@@ -91,11 +91,11 @@ boxItems.forEach(
 					) {
 					infoPopup.classList.remove('visually-hidden');
 					infoPopup.classList.add('out-of-viewport');
-					infoPopup.style.right = boxSide + 'px';
+					infoPopup.style.transform = 'translate(-' + boxSide + 'px)';
 				}
 				else if (infoPopup !== null) {
-					infoPopup.style.left = null;
-					infoPopup.style.right = null;
+					infoPopup.style.transform = null;
+					infoPopup.style.transform = null;
 					return;
 				} 
 			}	
@@ -107,8 +107,8 @@ boxItems.forEach(
 			if (infoPopup !== null) {
 				infoPopup.classList.remove('out-of-viewport');
 				infoPopup.classList.remove('inside-viewport');
-				infoPopup.style.left = null;
-				infoPopup.style.right = null;
+				infoPopup.style.transform = null;
+				infoPopup.style.transform = null;
 				infoPopup.classList.add('visually-hidden');
 			}
 			else {
