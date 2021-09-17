@@ -19,7 +19,6 @@
 }
 
 :root {
-	--box-item-side: 300px;
 	--box-item-side: clamp(200px, 20vw, 300px);
 	--accent-color: rgb(240, 104, 41);
 }
@@ -283,6 +282,7 @@ a:focus {
 	flex-wrap: wrap;
 	width: 100%;
 	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
 }
 
@@ -296,13 +296,11 @@ a:focus {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	/* width: var(--box-item-side); */
-	/* height: var(--box-item-side); */
 	flex: 1 1 250px;
-	/* max-width: 450px; */
+	min-width: 250px;
+	max-width: 450px;
 	width: 100%;
 	height: 300px;
-	/* min-width: 250px; */
 	margin-right: 2rem;
 	margin-bottom: 2rem;
 	outline: 1px solid #e2e2e2;
