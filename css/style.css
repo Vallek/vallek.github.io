@@ -439,7 +439,8 @@ a:focus {
 	padding: 1rem 1rem 0;
 	box-shadow: 5px 3px 10px -3px rgb(56, 56, 56);
 	background-color: #fff;
-	width: var(--box-item-side);
+	width: auto;
+	max-width: 300px;
 }
 
 .box-item_htmlac-work::after {

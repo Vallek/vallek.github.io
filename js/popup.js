@@ -76,7 +76,7 @@ boxItems.forEach(
 			let leftSide = el.getBoundingClientRect().left;
 			if (
 				infoPopup !== null &&
-				rightSide >= boxSide &&
+				rightSide >= 300 &&
 				viewportWidth >= 800
 			) {
 				infoPopup.classList.remove('visually-hidden');
@@ -86,7 +86,7 @@ boxItems.forEach(
 			else {
 				if (
 					infoPopup !== null &&
-					leftSide >= boxSide &&
+					leftSide >= 300 &&
 					viewportWidth >= 800
 					) {
 					infoPopup.classList.remove('visually-hidden');
