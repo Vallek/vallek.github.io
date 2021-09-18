@@ -27,8 +27,8 @@ boxItems.forEach(
 		}
 		function removeIt() {	
 			infoPopup.classList.add('visually-hidden');	
-			infoPopup.style.left = null;
-			infoPopup.style.right = null;
+			infoPopup.style.transform = null;
+			infoPopup.style.transform = null;
 		}
 
 		// Show heading on items links focus
