@@ -2,13 +2,25 @@
 <html lang="{{ page.lang | default: site.lang | default: "ru" }}">
   {%- include head.html -%}
   <body class="page home">   
-	{%- include header.html -%}
+	{% if page.lang == "en" %}
+    {%- include header_en.html -%}
+    {% else %}
+    {%- include header.html -%}
+    {% endif %}
 	<main class="main">
 		<article class="section page__section">
-			{{ content }}
+			{{ content }}	
 		</article>
-		{%- include aside.html -%}
+			{% if page.lang == "en" %}
+			{%- include aside_en.html -%}
+			{% else %}
+			{%- include aside.html -%}
+			{% endif %}
 	</main>
-    {%- include footer.html -%}
+		{% if page.lang == "en" %}
+		{%- include footer_en.html -%}
+		{% else %}
+		{%- include footer.html -%}
+		{% endif %}
   </body>
 </html>

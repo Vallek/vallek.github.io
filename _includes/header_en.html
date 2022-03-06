@@ -1,0 +1,54 @@
+<header class="header">
+	<div class="header__main">
+		<div class="header__intro">
+			<img class="avatar header__avatar" src="{{site.baseurl}}/img/ava.jpg" alt="аватарка с фото автора" width="80" height="80">
+			{% if page.layout == "home" %}
+			<h1 class="header__title">Hi! My name is <span class="header__name">Val</span><br> and this is my portfolio</h1>
+			{% else %}
+			<span class="header__title">Hi! My name is <span class="header__name">Val</span><br> and this is my <a href="{{site.baseurl}}/en/index.html">portfolio</a></span>
+			{% endif %}	
+		</div>
+		{% if page.layout == "home" %}
+		<p class="header__about-me">
+			I work in frontend and education, teach HTML, CSS and JavaScript, help students to overcome various difficulties. I create courses, live lectures and other educational materials. <strong class="header__important header__important_reveal"><a class="header__link" href="{{site.baseurl}}/pages/site/en/cv.html">My goal is to create highest quality education.</a></strong> In the future I'm planning to create my own frontend education organization. I'm also interested in everything about design, organizing and planning work.
+		</p>
+		{% endif %}	
+	</div>
+	<aside class="header__info">
+		<section class="contacts">
+			<p class="contacts__contact">
+				<strong>Email:</strong>
+				<a href="mailto:vwebdis@gmail.com">vwebdis@gmail.com</a>
+			</p>
+			<p class="contacts__contact">
+				<strong>Telegram:</strong>
+				<a>@webval</a>
+			</p>
+		</section>
+		<p>I live in Saint-Petersburg, Russia. Work remotely.</p>
+		<div class="social-links">
+			<a class="social-link github" href="https://github.com/Vallek/">
+				<img class="social-logo github" src="{{site.baseurl}}/img/icons/github.svg" width="30" height="30" alt="иконка гитхаба">
+			</a>
+			<a class="social-link jsfiddle" href="https://jsfiddle.net/user/Vallek/fiddles/">
+				<img class="social-logo github" src="{{site.baseurl}}/img/icons/jsfiddle.svg" width="30" height="30" alt="иконка jsfiddle">
+			</a>
+			<a class="social-link youtube" href="https://www.youtube.com/channel/UCzS4sE_0ltfSz6qx_FUCTdA">
+				<img class="social-logo youtube" src="{{site.baseurl}}/img/icons/youtube.svg" width="30" height="30" alt="иконка ютьюба">
+			</a>
+			<a class="social-link twitter" href="https://twitter.com/_vallek">
+				<img class="social-logo twitter" src="{{site.baseurl}}/img/icons/twi.svg" width="30" height="30" alt="иконка твиттера">
+			</a>
+		</div>
+		<section class="locales">
+			<h3 class="locales__text visually-hidden">Выбор языка/Languages</h3>
+			{% if page.lang == "en" %}
+			<a class="locales__lang locales__lang_ru" href="../{{page.name}}">RU</a>
+			<a class="locales__lang locales__lang_en" href="{{page.name}}">EN</a>
+			{% else if %}
+			<a class="locales__lang locales__lang_ru" href="{{page.name}}">RU</a>
+			<a class="locales__lang locales__lang_en" href="en/{{page.name}}">EN</a>
+			{% endif" %}
+		</section>
+	</aside>
+</header>

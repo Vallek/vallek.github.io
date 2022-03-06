@@ -1,4 +1,8 @@
+{% if page.layout == "home" %}
+<aside class="side-column side-column_home">
+{% else if %}
 <aside class="side-column">
+{% endif %}
 	{% if page.title != "Запись на консультацию" %}
 	<section class="section side-column__section consult">
 		<h2 class="section__heading consult__heading">Запишитесь на консультацию</h2>

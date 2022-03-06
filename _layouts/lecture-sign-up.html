@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "ru" }}">
-  {%- include head.html -%}
+	{% if page.lang == "en" %}
+    {%- include head_en.html -%}
+    {% else %}
+    {%- include head.html -%}
+    {% endif %}
   <body class="page home">   
-	{%- include header.html -%}
+	{% if page.lang == "en" %}
+    {%- include header_en.html -%}
+    {% else %}
+    {%- include header.html -%}
+    {% endif %}
 	<main class="main">
 		<article class="page__section">
 			{%- include all-lectures.html -%}
 			{%- include this-lectures.html -%}
 			{{ content }}
 		</article>
+		{% if page.lang == "en" %}
+		{%- include aside_en.html -%}
+		{% else %}
 		{%- include aside.html -%}
+		{% endif %}
 	</main>
-    {%- include footer.html -%}
+    	{% if page.lang == "en" %}
+		{%- include footer_en.html -%}
+		{% else %}
+		{%- include footer.html -%}
+		{% endif %}
   </body>
 </html>
