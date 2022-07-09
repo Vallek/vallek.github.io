@@ -2,12 +2,14 @@
 	<a class="skip-to-main" href="#main">Skip to main content</a>
 	<div class="header__main">
 		<div class="header__intro">
-			<img class="avatar header__avatar" src="{{site.baseurl}}/img/ava.jpg" alt="аватарка с фото автора" width="80" height="80">
 			{% if page.layout == "home" %}
+			<img class="avatar__image header__avatar" src="{{site.baseurl}}/img/ava.jpg" alt="аватарка с фото автора" width="80" height="80">
 			<h1 class="header__title">Hi! My name is <span class="header__name">Val</span><br> and this is my portfolio</h1>
 			{% else %}
-			<span class="header__title">Hi! My name is <span class="header__name">Val</span><br> and this is my <a href="{{site.baseurl}}/en/index.html">portfolio</a></span>
+			<a class="avatar" href="{{site.baseurl}}/index.html" aria-label="Ссылка на главную" title="Ссылка на главную"><img class="avatar__image" src="{{site.baseurl}}/img/ava.jpg" alt="аватарка с фото автора" width="80" height="80"></a>
+			<span class="header__title">Hi! My name is <span class="header__name">Val</span><br> and this is my <a class="header__home-link" href="{{site.baseurl}}/en/index.html">portfolio</a></span>
 			{% endif %}	
+			<button class="header__show"></button>
 		</div>
 		{% if page.layout == "home" %}
 		<p class="header__about-me">
@@ -29,17 +31,17 @@
 		</section>
 		<p>I live in Saint-Petersburg, Russia. Work remotely.</p>
 		<div class="social-links">
-			<a class="social-link github" href="https://github.com/Vallek/">
-				<img class="social-logo github" src="{{site.baseurl}}/img/icons/github.svg" width="30" height="30" alt="иконка гитхаба">
+			<a class="social-link social-link_github" href="https://github.com/Vallek/" title="Ссылка на гитхаб" aria-label="Ссылка на гитхаб">
+				<img class="social-logo social-logo_github" src="{{site.baseurl}}/img/icons/github.svg" width="30" height="30" alt="иконка гитхаба">
 			</a>
-			<a class="social-link jsfiddle" href="https://jsfiddle.net/user/Vallek/fiddles/">
-				<img class="social-logo github" src="{{site.baseurl}}/img/icons/jsfiddle.svg" width="30" height="30" alt="иконка jsfiddle">
+			<a class="social-link social-link_codepen" href="https://codepen.io/vallek/pens/" title="Ссылка на codepen" aria-label="Ссылка на codepen">
+				<img class="social-logo social-logo_codepen" src="{{site.baseurl}}/img/icons/codepen.svg" width="30" height="30" alt="иконка codepen">
 			</a>
-			<a class="social-link youtube" href="https://www.youtube.com/channel/UCzS4sE_0ltfSz6qx_FUCTdA">
-				<img class="social-logo youtube" src="{{site.baseurl}}/img/icons/youtube.svg" width="30" height="30" alt="иконка ютьюба">
+			<a class="social-link social-link_youtube" href="https://www.youtube.com/channel/UCzS4sE_0ltfSz6qx_FUCTdA" title="Ссылка на youtube" aria-label="Ссылка на youtube">
+				<img class="social-logo social-logo_youtube" src="{{site.baseurl}}/img/icons/youtube.svg" width="30" height="30" alt="иконка ютьюба">
 			</a>
-			<a class="social-link twitter" href="https://twitter.com/_vallek">
-				<img class="social-logo twitter" src="{{site.baseurl}}/img/icons/twi.svg" width="30" height="30" alt="иконка твиттера">
+			<a class="social-link social-link_twitter" href="https://twitter.com/_vallek" title="Ссылка на twitter" aria-label="Ссылка на twitter">
+				<img class="social-logo social-logo_twitter" src="{{site.baseurl}}/img/icons/twi.svg" width="30" height="30" alt="иконка твиттера">
 			</a>
 		</div>
 		<section class="locales">

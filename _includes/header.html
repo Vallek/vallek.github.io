@@ -2,12 +2,14 @@
 	<a class="skip-to-main" href="#main">Перейти к основному содержимому</a>
 	<div class="header__main">
 		<div class="header__intro">
-			<img class="avatar header__avatar" src="{{site.baseurl}}/img/ava.jpg" alt="аватарка с фото автора" width="80" height="80">
 			{% if page.layout == "home" %}
+			<img class="avatar__image header__avatar" src="{{site.baseurl}}/img/ava.jpg" alt="аватарка с фото автора" width="80" height="80">
 			<h1 class="header__title">Привет! Меня зовут <span class="header__name">Валера Хаслер</span><br> и это мое портфолио</h1>
 			{% else %}
-			<span class="header__title">Привет! Меня зовут <span class="header__name">Валера Хаслер</span><br> и это мое <a href="{{site.baseurl}}/index.html">портфолио</a></span>
+			<a class="avatar" href="{{site.baseurl}}/index.html" aria-label="Ссылка на главную" title="Ссылка на главную"><img class="avatar__image" src="{{site.baseurl}}/img/ava.jpg" alt="аватарка с фото автора" width="80" height="80"></a>
+			<span class="header__title">Привет! Меня зовут <span class="header__name">Валера Хаслер</span><br> и это мое <a class="header__home-link" href="{{site.baseurl}}/index.html">портфолио</a></span>
 			{% endif %}	
+			<button class="header__show"></button>
 		</div>
 		{% if page.layout == "home" %}
 		<p class="header__about-me">
@@ -29,16 +31,16 @@
 		</section>
 		<p>Живу в Санкт-Петербурге. Предпочитаю работать удаленно.</p>
 		<div class="social-links">
-			<a class="social-link social-link_github" href="https://github.com/Vallek/">
+			<a class="social-link social-link_github" href="https://github.com/Vallek/" title="Ссылка на гитхаб" aria-label="Ссылка на гитхаб">
 				<img class="social-logo social-logo_github" src="{{site.baseurl}}/img/icons/github.svg" width="30" height="30" alt="иконка гитхаба">
 			</a>
-			<a class="social-link social-link_codepen" href="https://codepen.io/vallek/pens/">
+			<a class="social-link social-link_codepen" href="https://codepen.io/vallek/pens/" title="Ссылка на codepen" aria-label="Ссылка на codepen">
 				<img class="social-logo social-logo_codepen" src="{{site.baseurl}}/img/icons/codepen.svg" width="30" height="30" alt="иконка codepen">
 			</a>
-			<a class="social-link social-link_youtube" href="https://www.youtube.com/channel/UCzS4sE_0ltfSz6qx_FUCTdA">
+			<a class="social-link social-link_youtube" href="https://www.youtube.com/channel/UCzS4sE_0ltfSz6qx_FUCTdA" title="Ссылка на youtube" aria-label="Ссылка на youtube">
 				<img class="social-logo social-logo_youtube" src="{{site.baseurl}}/img/icons/youtube.svg" width="30" height="30" alt="иконка ютьюба">
 			</a>
-			<a class="social-link social-link_twitter" href="https://twitter.com/_vallek">
+			<a class="social-link social-link_twitter" href="https://twitter.com/_vallek" title="Ссылка на twitter" aria-label="Ссылка на twitter">
 				<img class="social-logo social-logo_twitter" src="{{site.baseurl}}/img/icons/twi.svg" width="30" height="30" alt="иконка твиттера">
 			</a>
 		</div>
