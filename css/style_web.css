@@ -71,6 +71,7 @@
 /* Page */
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 a {
@@ -96,6 +97,8 @@ p {
 
 .page {
 	--back-color-1: rgba(0, 2, 53, 1);
+	position: relative;
+	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
