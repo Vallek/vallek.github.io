@@ -120,6 +120,7 @@ p {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 3em 1vw;
+	padding-top: calc(3em + 112px);
 }
 
 .header::before {
@@ -139,11 +140,29 @@ p {
 }
 
 .header__menu {
+	position: absolute;
+	transform: translateY(-100%);
+	top: calc(3em + 50px);
+	left: 0;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 3vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	margin-bottom: 4em;
+	z-index: 2;
+}
+
+.header__menu_anim {
+	position: fixed;
+	top: 0;
+	transform: translateY(0%);
+	background-color: rgb(126, 128, 181);
+	background-image: linear-gradient(0deg, #7ac5c5, #7070ca, #48488e);
+	transition: transform 0.5s ease-in;
+	padding: 0.6em 3vw;
 }
 
 .avatar {
@@ -192,7 +211,8 @@ a.avatar:hover {
 
 @media screen and (max-width: 900px) {
 	.header {
-		padding: 3em 3vw;
+		padding-left: 3vw;
+		padding-right: 3vw;
 	}
 	.header__menu {
 		align-items: start; /* чтобы не сдвигалось при появлении попап меню */
@@ -235,16 +255,17 @@ a.avatar:hover {
 
 .popup-menu__list {
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	z-index: 1;
+	right: -3vw;
+	bottom: -1rem;
+	z-index: 2;
 	transform: translate(0%, 100%);
-	list-style: none;
+	width: 100vw;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 	text-align: center;
 	color: #fff;
-	background-color: var(--back-color-1);
+	background-color: #48488e;
 }
 
 .popup-menu__list > li {
@@ -254,7 +275,7 @@ a.avatar:hover {
 
 .popup-menu__link {
 	width: 100%;
-	font-size: 2em;
+	font-size: 1.6em;
 	line-height: 2;
 	padding: 0 3em;
 }
@@ -415,6 +436,8 @@ a.avatar:hover {
 	width: 100%;
 	margin: 0;
 	margin-bottom: 0.5em;
+	scroll-margin-top: 85px;
+	scroll-snap-margin-top: 85px;
 }
 
 .anchor-link {
