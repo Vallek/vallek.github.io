@@ -9,15 +9,18 @@
 	</title>
 	<meta name="description" content="Портфолио Валеры Хаслера: фронтенд и образование">
 	<meta name="author" content="Валерий Хаслер">
-	<link rel="preload" href="{{site.baseurl}}/fonts/brygada-1918-v1-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="{{site.baseurl}}/fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/normalize.css">
 	{% if page.layout == "course_web" %}
+		<link rel="preload" href="{{site.baseurl}}/fonts/inter-v12-latin_cyrillic-100.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{site.baseurl}}/fonts/inter-v12-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{site.baseurl}}/fonts/inter-v12-latin_cyrillic-900.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="stylesheet" href="{{site.baseurl}}/css/style_web.css">
 		<script defer src="{{site.baseurl}}/js/web-menu-popup.js"></script>
 		<script defer src="{{site.baseurl}}/js/accordion.js"></script>
 		<script defer src="{{site.baseurl}}/js/web-scroll-anim.js"></script>
 		{% else %}
+		<link rel="preload" href="{{site.baseurl}}/fonts/brygada-1918-v1-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="{{site.baseurl}}/fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
 		<script defer src="{{site.baseurl}}/js/header.js"></script>
 	{% endif %}
