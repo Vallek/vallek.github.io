@@ -67,8 +67,12 @@ a:focus {
 	background-color: var(--color-grey);
 }
 
-.social-logo_github,
-.social-logo_codepen {
+.dark .themes__theme:hover::before {
+	background-color: var(--color-grey);
+}
+
+.dark .social-logo_github,
+.dark .social-logo_codepen {
 	filter: invert(1);
 }
 
@@ -205,56 +209,6 @@ a:focus {
 	padding: 0 0.3em;
 }
 
-.locales__text {
-	font-size: 1rem;
-	font-weight: 400;
-	margin-top: 0;
-	margin-bottom: 0.3em;
-}
-
-.locales__lang {
-	color: var(--text-color);
-	position: relative;
-	font-weight: 600;
-	text-decoration: none;
-}
-
-.locales__lang:hover::before {
-	content: '';
-	display: inline-block;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 2px;
-	background-color: black;
-}
-
-.locales__lang:not(:last-of-type) {
-	margin-right: 0.7em;
-}
-
-.locales__lang_ru::after {
-	content: '';
-	display: inline-block;
-	background-image: url('../img/icons/flag-ru.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 1em;
-	height: 1em;
-	margin-left: 0.2em;
-}
-
-.locales__lang_en::after {
-	content: '';
-	display: inline-block;
-	background-image: url('../img/icons/flag-uk.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 1em;
-	height: 1em;
-	margin-left: 0.2em;
-}
-
 .social-links {
 	display: flex;
 	flex-wrap: wrap;
@@ -315,6 +269,96 @@ a:focus {
 	border-radius: 50%;
 	object-fit: cover;
 	object-position: 18%;
+}
+
+.locales {
+	display: inline-flex;
+	justify-content: end;
+	margin-right: 2em;
+}
+
+.locales__text {
+	font-size: 1rem;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 0.3em;
+}
+
+.locales__lang {
+	color: var(--text-color);
+	position: relative;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.locales__lang:hover::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: black;
+}
+
+.locales__lang_ru {
+	order: 1;
+}
+
+.locales__lang_en {
+	order: 3;
+}
+
+.locales::after {
+	order: 2;
+	content: '/';
+	display: inline-block;
+	font-weight: bold;
+	margin: 0 0.5em;
+}
+
+.themes {
+	display: inline-flex;
+}
+
+.themes::after {
+	order: 2;
+	content: '/';
+	display: inline-block;
+	font-weight: bold;
+	margin: 0 0.5em;
+}
+
+.themes__theme_light {
+	order: 1;
+}
+
+.themes__theme_dark {
+	order: 3;
+}
+
+.themes__text {
+	font-size: 1rem;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 0.3em;
+}
+
+.themes__theme {
+	color: var(--text-color);
+	position: relative;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.themes__theme:hover::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: black;
 }
 
 .header__show {
