@@ -18,11 +18,12 @@
 	font-display: block;
 }
 
-:root {
-	--accent-color: rgb(240, 104, 41);
-}
-
 .home {
+	--text-color: #000;
+	--heading-color: #442010;
+	--accent-color: rgb(240, 104, 41);
+	--background-dark: #343131;
+	--color-grey: #d9d9d9;
 	line-height: initial;
 	font-family: 'Open Sans', sans-serif;
 	max-width: 1920px;
@@ -38,6 +39,48 @@ a:focus {
 	outline-offset: 2px;
 }
 
+/* Dark theme */
+.home.dark {
+	--text-color: #d9d9d9;
+	--heading-color: #d9d9d9;
+	color: var(--color-grey);
+	background-color: var(--background-dark);
+}
+
+.dark a,
+.dark .anchor-link,
+.dark .skills__link,
+.dark .crumbs-link:hover {
+	color: var(--color-grey);
+}
+
+.dark .box-item__heading {
+	color: var(--color-grey);
+	background-color: var(--background-dark);
+}
+
+.dark .info {
+	background-color: var(--background-dark);
+}
+
+.dark .locales__lang:hover::before {
+	background-color: var(--color-grey);
+}
+
+.social-logo_github,
+.social-logo_codepen {
+	filter: invert(1);
+}
+
+.dark .last-posts {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+.dark .anchor-link:hover::after,
+.dark .anchor-link:focus::after {
+	color: var(--color-grey);
+}
+
 /* Header */
 .header {
 	box-sizing: border-box;
@@ -47,8 +90,6 @@ a:focus {
 	margin: 0 auto 1.6em;
 	width: 100%;
 	padding: 0 2vw;
-	--text-color: #000;
-	--heading-color: #442010;
 }
 
 .header__intro {
