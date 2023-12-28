@@ -18,8 +18,6 @@
 	font-display: block;
 }
 
-body.hidden {display: none;}
-
 @media (prefers-color-scheme: dark) {
 	.home {
 		color: #d9d9d9;
