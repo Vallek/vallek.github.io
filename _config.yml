@@ -22,8 +22,8 @@ title: Портфолио Валеры Хаслера
 email: vwebdis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Портфолио Валерия Хаслера: фронтенд и образование
-baseurl: "/Portfolio" # the subpath of your site, e.g. /blog
-url: "{{site.baseurl}}/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://vallek.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Vallek
 # deployment
 host: 0.0.0.0
