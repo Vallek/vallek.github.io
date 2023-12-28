@@ -7,10 +7,14 @@ const darkThemeLink = document.querySelector('.themes__theme_dark');
 // Check if user set dark theme before
 if (localStorage.getItem('vallek-portfolio-theme') == 'dark') {
 	page.classList.add('dark');
+	document.body.classList.remove('hidden');
+} else {
+	document.body.classList.remove('hidden');
 }
 // Check if user prefers dark theme
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 	page.classList.add('dark');
+	document.body.classList.remove('hidden');
 }
 // Check theme preference switch real time
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -36,5 +40,5 @@ lightThemeLink.addEventListener('click', setLight);
 function setLight(el) {
 	el.preventDefault();
 	page.classList.remove('dark');
-		localStorage.setItem('vallek-portfolio-theme', 'light');
+	localStorage.setItem('vallek-portfolio-theme', 'light');
 }
