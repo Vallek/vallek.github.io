@@ -28,6 +28,9 @@ github_username:  Vallek
 # deployment
 host: 0.0.0.0
 
+# Change prod folder from site to docs
+destination: docs
+
 # Build settings
 # theme: minima
 # plugins:
