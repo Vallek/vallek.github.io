@@ -18,6 +18,13 @@
 	font-display: block;
 }
 
+@media (prefers-color-scheme: dark) {
+	.home {
+		color: #d9d9d9;
+		background-color: #343131;
+	}
+}
+
 .home {
 	--text-color: #000;
 	--heading-color: #442010;
@@ -32,6 +39,8 @@
 	min-height: 100vh;
 	display: flex;
     flex-direction: column;
+	color: var(--text-color);
+	background-color: initial;
 }
 
 a:focus-visible {
