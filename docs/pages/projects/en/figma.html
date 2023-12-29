@@ -35,8 +35,18 @@
 		gtag('js', new Date());
 		gtag('config', 'G-D7BKEC74VV');
 	</script>
-</head><body class="page home">  
-	<header class="header">
+</head><body class="page home"><script>
+	const thisPage = document.querySelector('.home');
+
+	// Check if user set dark theme before
+	if (localStorage.getItem('vallek-portfolio-theme') == 'dark') {
+		thisPage.classList.add('dark');
+	}
+	// Check if user prefers dark theme
+	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		thisPage.classList.add('dark');
+	}
+</script><header class="header">
 	<a class="skip-to-main" href="#main">Skip to main content</a>
 	<div class="header__main">
 		<div class="header__intro">

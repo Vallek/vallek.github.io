@@ -5,7 +5,8 @@
     {% else %}
     {%- include head.html -%}
     {% endif %}
-  <body class="home">   
+  <body class="home">
+    {%- include inline-dark-theme.html -%}   
     {% if page.lang == "en" %}
     {%- include header_en.html -%}
     {% else %}

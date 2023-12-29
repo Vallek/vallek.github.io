@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "ru" }}">
   {%- include head.html -%}
-  <body class="page home">  
+  <body class="page home">
+	{%- include inline-dark-theme.html -%}
 	{% if page.lang == "en" %}
     {%- include header_en.html -%}
     {% else %}

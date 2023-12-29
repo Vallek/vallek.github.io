@@ -1,0 +1,12 @@
+<script>
+	const thisPage = document.querySelector('.home');
+
+	// Check if user set dark theme before
+	if (localStorage.getItem('vallek-portfolio-theme') == 'dark') {
+		thisPage.classList.add('dark');
+	}
+	// Check if user prefers dark theme
+	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		thisPage.classList.add('dark');
+	}
+</script>
