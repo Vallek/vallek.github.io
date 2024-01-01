@@ -45,6 +45,8 @@ jobs:
         with:
           source: ./
           destination: ./docs
+      - name: pre
+        run: bundle lock --add-platform x86_64-linux
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build
