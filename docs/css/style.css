@@ -493,6 +493,10 @@ a:focus-visible {
 	border: none;	
 }
 
+.last-posts-webdev {
+	height: auto;
+}
+
 .main__section {
 	display: flex;
 	flex-wrap: wrap;
