@@ -34,8 +34,18 @@
 		gtag('config', 'G-VK07ZG60TK');
 	</script>
 </head>
-  <body class="page home">   
-	<header class="header">
+  <body class="page home"><script>
+	const thisPage = document.querySelector('.home');
+
+	// Check if user set dark theme before
+	if (localStorage.getItem('vallek-portfolio-theme') == 'dark') {
+		thisPage.classList.add('dark');
+	}
+	// Check if user prefers dark theme
+	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		thisPage.classList.add('dark');
+	}
+</script><header class="header">
 	<a class="skip-to-main" href="#main">Перейти к основному содержимому</a>
 	<div class="header__main">
 		<div class="header__intro">
@@ -102,7 +112,8 @@
 </header>
 	<main class="main" id="main">
 		<article class="section page__section">
-			<h1 class="page__heading">Список всех лекций и вебинаров</h1>
+<a class="crumbs-link" href="/pages/projects/all-lectures.html">Список всех лекций</a>
+<h1 class="page__heading">Список всех лекций и вебинаров</h1>
 <p class="page__text">Это список всех проведенных мною лекций и вебинаров. Сюда не входят основные занятия курса <a href="/pages/courses/web.html">"Создание и верстка сайтов"</a>. Только отдельные лекции, которые можно проводить в отрыве от остального курса.</p>
 <ul class="course course_lectures">
 	<li class="course__item course__item_close">
@@ -278,7 +289,7 @@
 	</section>
 </aside>
 	</main>
-		<footer class="footer">
+   		<footer class="footer">
 	<p class="copyright footer__copyright">&copy; 2018—2024 <a class="copyright__email" href="mailto:vwebdis@gmail.com">Валерий Хаслер</a>. Собрано на Jekyll</p>
 	<div class="attribution footer__attribution">
 		Icons made by <a class="attribution__link" href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a class="attribution__link" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
