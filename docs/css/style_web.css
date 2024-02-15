@@ -517,7 +517,6 @@ a.avatar:hover {
 	height: 100%;
 	min-height: 192px;
 	align-self: stretch;
-	box-sizing: border-box;
 	border-radius: 10px;
 	transition: transform 0.3s ease-in-out;
 }
