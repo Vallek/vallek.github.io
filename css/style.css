@@ -499,6 +499,7 @@ a:focus-visible {
 }
 
 .last-posts {
+	height: auto;
 	border: none;
 }
 
