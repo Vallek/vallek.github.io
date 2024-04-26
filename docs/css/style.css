@@ -958,6 +958,11 @@ a:focus-visible {
 	text-decoration: none;
 }
 
+.footer__attribution {
+	max-width: 160ch;
+	margin: 0 auto;
+}
+
 /* Page */
 .page__heading {
 	font-size: 2rem;
