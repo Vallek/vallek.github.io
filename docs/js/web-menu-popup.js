@@ -17,6 +17,7 @@ document.querySelector('.popup-menu__close').addEventListener('click', (e) => {
 
 const header = document.querySelector('.header');
 const headerMenu = document.querySelector('.header__menu');
+const input = header.querySelector('.popup-menu__input');
 const menuButton = document.querySelector('.popup-menu__button');
 const menuLink = document.querySelectorAll('.popup-menu__link');
 
@@ -30,12 +31,20 @@ function scrollHeader() {
 	}	
 }
 
-function closeMenu() {
-	menuButton.click();
-}
-
 window.addEventListener('scroll', scrollHeader);
 window.addEventListener('DOMContentLoaded', scrollHeader);
-menuLink.forEach((el) => {el.addEventListener('click', closeMenu);});
+
+// Close menu on link click to reveal content
+menuLink.forEach((el) => {el.addEventListener('click', () => {
+	input.checked = false;
+});});
+
+// Close when click outside
+document.addEventListener('click', (el) => {
+	let target = el.target;
+	if (!header.contains(target)) {
+		input.checked = false;
+	}
+});
 
 
