@@ -1122,6 +1122,14 @@ a:focus-visible {
 }
 
 /* Lecture Sign Up */
+.sign-up-list {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
 .sign-up-link {
 	text-decoration: none;
 	display: inline-block;
