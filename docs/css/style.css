@@ -1131,6 +1131,7 @@ a:focus-visible {
 }
 
 .sign-up-link {
+	--color-grey: white;
 	text-decoration: none;
 	display: inline-block;
 	padding: 1em 2em;
