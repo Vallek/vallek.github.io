@@ -801,6 +801,10 @@ a:focus-visible {
 	background-color: #b27010;
 }
 
+.box-item__image_usercss {
+	object-fit: none;
+}
+
 .box-item__heading {
 	color: black;
 	font-weight: 400;
