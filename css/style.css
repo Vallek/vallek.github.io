@@ -207,14 +207,19 @@ a:focus-visible {
 .contacts__contact {
 	display: inline-block;
 	margin-top: 0;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 }
 
 .contacts__contact>a {
 	color: var(--text-color);
 }
 
-.hire-me {
+.hire-info {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.hire-info__hire-me {
 	white-space: pre;
 	color: white;
 	background-color: var(--accent-color);
