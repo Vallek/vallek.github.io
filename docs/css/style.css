@@ -819,7 +819,7 @@ a:focus-visible {
 
 .job__heading {
 	font-size: 1.2rem;
-	font-weight: 400;
+	font-weight: 700;
 	margin-top: 0;
 	margin-bottom: 0.5em;
 }
@@ -987,7 +987,8 @@ a:focus-visible {
 
 /* Page */
 .page__heading {
-	font-size: 2rem;
+	font-family: 'Brygada 1918', serif;
+	font-size: 2.4rem;
 	margin-top: 0;
 	margin-bottom: 0.67em;
 }
@@ -1006,9 +1007,16 @@ a:focus-visible {
 	outline: 1px solid #e2e2e2;
 }
 
+h2 {
+	font-family: 'Brygada 1918', serif;
+	font-size: 2em;
+	margin-bottom: 0.4em;
+}
+
 .page__text {
 	font-size: 1.125em;
 	max-width: 80ch;
+	margin-top: 0;
 }
 
 .points-list {
@@ -1055,7 +1063,6 @@ a:focus-visible {
 .crumbs-link {
 	display: inline-block;
 	color: rgb(115, 115, 115);
-	text-decoration: none;
 	margin-bottom: 0.5em;
 }
 
