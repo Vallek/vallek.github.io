@@ -647,7 +647,8 @@ a:focus-visible {
 .project_new::after,
 .project_new-en::after,
 .work_design::after,
-.work_design-en::after {
+.work_design-en::after,
+.project_nodejs::after {
 	display: inline-block;
 	font-size: 1rem;
 	padding: 0.2em 0.4em;
@@ -684,6 +685,10 @@ a:focus-visible {
 
 .work_design-en::after {
 	content: 'Design';
+}
+
+.project_nodejs::after {
+	content: 'Node.js';
 }
 
 .box-item__image-link {
