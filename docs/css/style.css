@@ -1202,7 +1202,8 @@ h2 {
 	font-size: 2em;
 	background-color: #000;
 	color: #fff;
-	outline-color: #000;
+	outline: 3px dashed var(--text-color);
+	outline-offset: 2px;;
 }
 
 /* JS */
