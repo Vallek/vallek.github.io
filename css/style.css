@@ -1174,7 +1174,8 @@ h2 {
 }
 
 .sign-up-link:focus-visible {
-	outline-color: black;
+	outline: 3px dashed var(--text-color);
+	outline-offset: 2px;
 }
 
 /* Skip link */
