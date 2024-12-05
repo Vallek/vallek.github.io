@@ -36,10 +36,13 @@
 	background-color: initial;
 }
 
+/* Dark theme css detect */
 @media (prefers-color-scheme: dark) {
 	.home {
-		color: #d9d9d9;
-		background-color: #343131;
+		--text-color: #d9d9d9;
+		--heading-color: #d9d9d9;
+		color: var(--color-grey);
+		background-color: var(--background-dark);
 	}
 }
 
@@ -1204,6 +1207,41 @@ h2 {
 	color: #fff;
 	outline: 3px dashed var(--text-color);
 	outline-offset: 2px;;
+}
+
+/* Dark theme css detect */
+@media (prefers-color-scheme: dark) {
+	a,
+	.anchor-link,
+	.skills__link,
+	.crumbs-link:hover,
+	.course__heading {
+		color: var(--color-grey);
+	}
+	.box-item__heading {
+		color: var(--color-grey);
+		background-color: var(--background-dark);
+	}
+	.info {
+		background-color: var(--background-dark);
+	}
+	.locales__lang:hover::before {
+		background-color: var(--color-grey);
+	}
+	.themes__theme:hover::before {
+		background-color: var(--color-grey);
+	}
+	.social-logo_github,
+	.social-logo_codepen {
+		filter: invert(1);
+	}
+	.last-posts {
+		filter: invert(0.81) hue-rotate(180deg);
+	}
+	.anchor-link:hover::after,
+	.anchor-link:focus-visible::after {
+		color: var(--color-grey);
+	}
 }
 
 /* JS */
