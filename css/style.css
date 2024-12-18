@@ -168,12 +168,8 @@ a:focus-visible {
 	margin: 0;
 }
 
-@media (max-width: 900px) {
-
-	.header__about-me,
-	.header__info {
-		display: none;
-	}
+.header__about-me:first-of-type {
+	margin-bottom: 0.4em;
 }
 
 .header__important {
@@ -185,7 +181,7 @@ a:focus-visible {
 	background-position: right bottom;
 }
 
-.header__about-me:hover>.header__important_reveal {
+.header__about-me:hover .header__important_reveal {
 	background-image: linear-gradient(to right, var(--accent-color) 50%, rgba(255, 255, 255, 0) 50%);
 	background-size: 200% 100%;
 	background-position: left bottom;
