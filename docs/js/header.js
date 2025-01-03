@@ -10,20 +10,6 @@ let intro = header.querySelector('.header__intro');
 let arr = [];
 arr.push(about, info);
 
-function hideNavOnStart() {
-	for (let el of arr) {
-		if (el != null &&
-		window.innerWidth < 900) {
-			el.classList.add('visually-hidden');
-		}
-		if (el != null &&
-		window.innerWidth >= 900) {
-			el.classList.remove('visually-hidden');
-		}
-	}
-}
-hideNavOnStart();
-
 function showPopup() {
 	for (let el of arr) {
 		if (el != null) {

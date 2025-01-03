@@ -76,7 +76,7 @@
 		</div>
 			
 	</div>
-	<aside class="header__info visually-hidden">
+	<aside class="header__info">
 		<section class="contacts">
 			<h2 class="visually-hidden">Контакты</h2>
 			<p class="contacts__contact">
@@ -116,6 +116,26 @@
 			<a class="themes__theme themes__theme_dark" href="#">Темная</a>
 		</section>
 	</aside>
+	<script>
+	let pageHeader = document.querySelector('.header');
+	let pageAbout = pageHeader.querySelector('.header__about');
+	let pageInfo = pageHeader.querySelector('.header__info');
+	let pageArr = [];
+	pageArr.push(pageAbout, pageInfo);
+	function hideNavOnStart() {
+		for (let el of pageArr) {
+			if (el != null &&
+			window.innerWidth < 900) {
+				el.classList.add('visually-hidden');
+			}
+			if (el != null &&
+			window.innerWidth >= 900) {
+				el.classList.remove('visually-hidden');
+			}
+		}
+	}
+	hideNavOnStart();
+</script>
 </header>
 	<main class="main" id="main">
 		<article class="page__section">

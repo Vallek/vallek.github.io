@@ -73,13 +73,13 @@
 			</button>
 		</div>
 		
-		<div class="header__about visually-hidden">
+		<div class="header__about">
 			<p class="header__about-me">Я занимаюсь фронтендом и образованием. Верстаю веб-интерфейсы, преподаю верстку и создаю образовательные проекты. Умею делать адаптивную, современную верстку по лучшим практикам. Помогаю студентам преодолевать трудности в обучении. Работаю автором курсов, лектором, наставником. Провожу консультации.</p>
 			<p class="header__about-me"><strong class="header__important header__important_reveal"><span class="header__link">Меня заботит качество веба.</span></strong> Я люблю все улучшать и искать эффективное решение проблем. Кроме того меня интересует всё, что касается дизайна, организации и планирования работы.</p>
 		</div>
 			
 	</div>
-	<aside class="header__info visually-hidden">
+	<aside class="header__info">
 		<section class="contacts">
 			<h2 class="visually-hidden">Контакты</h2>
 			<p class="contacts__contact">
@@ -119,6 +119,26 @@
 			<a class="themes__theme themes__theme_dark" href="#">Темная</a>
 		</section>
 	</aside>
+	<script>
+	let pageHeader = document.querySelector('.header');
+	let pageAbout = pageHeader.querySelector('.header__about');
+	let pageInfo = pageHeader.querySelector('.header__info');
+	let pageArr = [];
+	pageArr.push(pageAbout, pageInfo);
+	function hideNavOnStart() {
+		for (let el of pageArr) {
+			if (el != null &&
+			window.innerWidth < 900) {
+				el.classList.add('visually-hidden');
+			}
+			if (el != null &&
+			window.innerWidth >= 900) {
+				el.classList.remove('visually-hidden');
+			}
+		}
+	}
+	hideNavOnStart();
+</script>
 </header>
     <main class="main" id="main">
       <div class="main__column">

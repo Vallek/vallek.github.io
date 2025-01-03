@@ -26,13 +26,13 @@
 			</button>
 		</div>
 		{% if page.layout == "home" %}
-		<div class="header__about visually-hidden">
+		<div class="header__about">
 			<p class="header__about-me">Я занимаюсь фронтендом и образованием. Верстаю веб-интерфейсы, преподаю верстку и создаю образовательные проекты. Умею делать адаптивную, современную верстку по лучшим практикам. Помогаю студентам преодолевать трудности в обучении. Работаю автором курсов, лектором, наставником. Провожу консультации.</p>
 			<p class="header__about-me"><strong class="header__important header__important_reveal"><span class="header__link">Меня заботит качество веба.</span></strong> Я люблю все улучшать и искать эффективное решение проблем. Кроме того меня интересует всё, что касается дизайна, организации и планирования работы.</p>
 		</div>
 		{% endif %}	
 	</div>
-	<aside class="header__info visually-hidden">
+	<aside class="header__info">
 		<section class="contacts">
 			<h2 class="visually-hidden">Контакты</h2>
 			<p class="contacts__contact">
@@ -78,4 +78,5 @@
 			<a class="themes__theme themes__theme_dark" href="#">Темная</a>
 		</section>
 	</aside>
+	{% include hide-header.html %}
 </header>
