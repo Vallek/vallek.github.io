@@ -914,14 +914,31 @@ a:focus-visible {
 	position: relative;
 	color: rgb(36, 36, 36);
 	display: inline;
-	/* margin: 0.125em 0; */
-	padding: 0 0.125em;
+	margin: 0.125em 0;
 	border-radius: 5px;
 	line-height: 1.88;
 	white-space: nowrap;
 }
 
-.skills__skill::before {
+.skills__skill_big {
+	font-size: 1.2em;
+}
+
+.skills__skill_break::after {
+	content: "\a";
+	white-space: pre;
+}
+
+.skills__link {
+	box-sizing: border-box;
+	position: relative;
+	display: inline-block;
+	padding: 0 0.2em;
+	color: initial;
+	text-decoration: none;
+}
+
+.skills__link::before {
 	visibility: hidden;
 	content: '';
 	display: inline-block;
@@ -935,26 +952,12 @@ a:focus-visible {
 	transform: translateY(-50%) skew(0, -2deg);
 }
 
-.skills__skill:hover::before {
+.skills__link:hover::before {
 	visibility: visible;
 }
 
 .skills__skill:hover>.skills__link {
 	color: #fff;
-}
-
-.skills__skill_break::after {
-	content: "\a";
-	white-space: pre;
-}
-
-.skills__link {
-	color: initial;
-	text-decoration: none;
-}
-
-.skills__skill_big {
-	font-size: 1.2em;
 }
 
 /* Footer */
