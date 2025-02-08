@@ -956,7 +956,7 @@ a:focus-visible {
 	visibility: visible;
 }
 
-.skills__skill:hover>.skills__link {
+.skills__link:hover {
 	color: #fff;
 }
 
