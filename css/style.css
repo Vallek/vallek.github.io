@@ -794,6 +794,11 @@ a:focus-visible {
 	object-fit: none;
 }
 
+.box-item__image_todo {
+	object-fit: contain;
+	background-color: #deb887;
+}
+
 .box-item__heading {
 	color: black;
 	font-weight: 400;
