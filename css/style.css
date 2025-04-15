@@ -168,8 +168,12 @@ a:focus-visible {
 	margin: 0;
 }
 
-.header__about-me:first-of-type {
+.header__about-me {
 	margin-bottom: 0.4em;
+}
+
+.header__about-me:last-of-type {
+	margin-bottom: 0;
 }
 
 .header__important {
