@@ -62,20 +62,20 @@
 		{% if page.layout != "home" %}
 		<section class="locales">
 			<h3 class="locales__text visually-hidden">Выбор языка/Languages</h3>
-			<a class="locales__lang locales__lang_ru" href="../{{page.name}}">RU</a>
-			<a class="locales__lang locales__lang_en" href="{{page.name}}">EN</a>
+			<a class="locales__lang locales__lang_ru" href="../{{page.name}}" title="Русская версия">RU</a>
+			<a class="locales__lang locales__lang_en" href="{{page.name}}" title="English version">EN</a>
 		</section>
 		{% else %}
 		<section class="locales">
 			<h3 class="locales__text visually-hidden">Выбор языка/Languages</h3>
-			<a class="locales__lang locales__lang_ru" href="../">RU</a>
-			<a class="locales__lang locales__lang_en" href="{{site.baseurl}}/en/">EN</a>
+			<a class="locales__lang locales__lang_ru" href="../" title="Русская версия">RU</a>
+			<a class="locales__lang locales__lang_en" href="{{site.baseurl}}/en/" title="English version">EN</a>
 		</section>
 		{% endif %}
 		<section class="themes">
 			<h3 class="themes__text visually-hidden">Выбор темы/Themes</h3>
-			<a class="themes__theme themes__theme_light" href="#">Light</a>
-			<a class="themes__theme themes__theme_dark" href="#">Dark</a>
+			<a class="themes__theme themes__theme_light" href="#" title="Light theme">Light</a>
+			<a class="themes__theme themes__theme_dark" href="#" title="Dark theme">Dark</a>
 		</section>
 	</aside>
 	{% include hide-header.html %}
