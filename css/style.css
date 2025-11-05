@@ -1179,9 +1179,38 @@ h2 {
 	--color-grey: white;
 	text-decoration: none;
 	display: inline-block;
-	padding: 1em 2em;
+	padding: 1em;
 	color: white;
 	background-color: var(--accent-color);
+}
+
+.consult__text {
+	margin: 0.8em 0;
+	font-weight: bold;
+}
+
+.consult__link {
+	font-weight: normal;
+}
+
+.consult__link::before {
+	content: '';
+	display: inline-block;
+	width: 1.2em;
+	height: 1.2em;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	vertical-align: middle;
+	margin-right: 0.2em;
+}
+
+.consult__link_email::before {
+	background-image: url('https://vallek.github.io/dev/img/email.png');
+}
+
+.consult__link_tg::before {
+	background-image: url('https://vallek.github.io/dev/img/tg.svg');
 }
 
 .sign-up-link:focus-visible {
