@@ -1190,19 +1190,24 @@ h2 {
 }
 
 .consult__link {
+	display: inline-block;
 	font-weight: normal;
 }
 
 .consult__link::before {
 	content: '';
 	display: inline-block;
-	width: 1.2em;
-	height: 1.2em;
+	width: 54px;
+	height: 54px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
 	vertical-align: middle;
 	margin-right: 0.2em;
+}
+
+.consult__link_email {
+	margin-right: 1em;
 }
 
 .consult__link_email::before {
