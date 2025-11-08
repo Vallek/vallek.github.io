@@ -1211,11 +1211,11 @@ h2 {
 }
 
 .consult__link_email::before {
-	background-image: url('https://vallek.github.io/dev/img/email.png');
+	background-image: url('../img/email.png');
 }
 
 .consult__link_tg::before {
-	background-image: url('https://vallek.github.io/dev/img/tg.svg');
+	background-image: url('../img/tg.svg');
 }
 
 .sign-up-link:focus-visible {
