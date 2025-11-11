@@ -43,7 +43,10 @@
 </head>
   <body class="page home"><script>
 	const thisPage = document.querySelector('.home');
-
+	// Makes dark theme default
+	if (localStorage.getItem('vallek-portfolio-theme') !== 'light') {
+		thisPage.classList.add('dark');
+	}
 	// Check if user set dark theme before
 	if (localStorage.getItem('vallek-portfolio-theme') == 'dark') {
 		thisPage.classList.add('dark');
