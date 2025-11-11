@@ -570,9 +570,17 @@ a:focus-visible {
 	padding: 0.1em 0.3em;
 }
 
+@media screen and (max-width: 860px) {
+	.section__link {
+		order: 3;
+		margin-top: 1em;
+	}
+}
+
 .section__link:hover {
 	background: rgb(223, 223, 223);
 }
+
 .dark .section__link:hover {
 	background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 20%, var(--background-dark) 80%);
 	background-repeat: no-repeat;
