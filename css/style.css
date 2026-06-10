@@ -821,7 +821,7 @@ a:focus-visible {
 }
 
 .box-item__image_usercss {
-	object-fit: none;
+	object-fit: contain;
 }
 
 .box-item__image_todo {
